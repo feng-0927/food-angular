@@ -1,0 +1,25 @@
+{
+  "name": "food-html",
+  "authors": [
+    "admi <admin@qq.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular-ui-router": "^1.0.22"
+  },
+  "dependencies": {
+    "angular-bootstrap": "^2.5.0",
+    "bootstrap": "3.3.7",
+    "ng-file-upload-shim": "^12.2.13"
+  }
+}

@@ -1,0 +1,61 @@
+<!-- content start -->
+<div class="admin-content">
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">公司简介</strong> / <small>{{id?"编辑":"添加"}}</small></div>
+  </div>
+  <div class="am-tabs am-margin" data-am-tabs>
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <!-- <li ><a href="#tab1">基本信息</a></li> -->
+      <li class="am-active"><a href="#tab2">详细描述</a></li>
+      <!-- <li><a href="#tab3">SEO 选项</a></li> -->
+    </ul>
+    <div class="am-tabs-bd">
+      <div class="am-tab-panel am-fade am-in am-active" id="tab2">
+        <form class="am-form">
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              标题
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" ng-model="singlePage.title" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6">*必填，不可重复</div>
+          </div>
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-text-right">
+              图片
+            </div>
+            <input type="hidden" name="" ng-model="singlePage.oldpic">
+            <div class="am-u-sm-1">
+              <div class="am-btn am-btn-primary am-btn-xs" ngf-select 
+              ng-model="singlePage.pic" 
+              ngf-pattern="'image/*'"
+              ngf-accept="'image/*'"
+              ngf-max-size="20MB"
+              ngf-min-height="100"
+              ngf-resize="{width: 100,height: 100}">上传</div>
+            </div>
+            <div class="am-u-sm-9">
+              <img style="width:100px;height:100px" ngf-thumbnail="singlePage.pic || '/thump.jpg'">
+            </div>
+          </div>
+
+          <div class="am-g am-margin-top-sm">
+            <div class="am-u-sm-2 am-text-right">
+              内容
+            </div>
+            <div class="am-u-sm-10">
+              <textarea ng-model="singlePage.content" rows="10" placeholder=""></textarea>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-margin">
+    <button type="button" ng-click="save()" class="am-btn am-btn-primary am-btn-xs">提交保存</button>
+  </div>
+</div>
+<!-- content end -->

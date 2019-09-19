@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- 优先使用 IE 最新版本和 Chrome -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="./assets/home/css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="./assets/home/css/style.css"/>
+	</head>
+	<body ng-app="food">
+        <div ui-view="nav"></div>
+        <div ui-view="banner"></div>
+        <div ui-view="content"></div>
+        <div ui-view="footer"></div> 
+	</body>
+	<!--jq调用-->
+</html>
+<!-- 核心文件 -->
+<script src="./bower_components/angular/angular.js"></script>
+<!-- 依赖文件 -->
+<script src="./bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- 入口文件，在此配置依赖 -->
+<script src="./home-app.js"></script>
+<!-- 服务文件 -->
+<script src="./services/newsFactory.js"></script>
+<script src="./services/singlePageFactory.js"></script>
+<script src="./services/foodFactory.js"></script>
+<script src="./services/foodCateFactory.js"></script>
+<script src="./services/friendLinkFactory.js"></script>
+<script src="./services/regionFactory.js"></script>
+<script src="./services/bannerFactory.js"></script>
+<script src="./services/navFactory.js"></script>
+<script src="./services/companyFactory.js"></script>
+<script src="./services/shopFactory.js"></script>
+<script src="./services/regionFactory.js"></script>
+<!-- 路由文件 -->
+<script src="./routers/homeRouter.js"></script>
+<!-- 控制器文件 -->
+<script src="./controllers/home/indexController.js"></script>
+<script src="./controllers/home/bannerController.js"></script>
+<script src="./controllers/home/navController.js"></script>
+<script src="./controllers/home/friendLinkController.js"></script>
+<script src="./controllers/home/singlePageController.js"></script>
+<script src="./controllers/home/foodController.js"></script>
+<script src="./controllers/home/newsController.js"></script>
+<script src="./controllers/home/companyController.js"></script>
+<script src="./controllers/home/shopController.js"></script>

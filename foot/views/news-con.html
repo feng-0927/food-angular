@@ -1,0 +1,26 @@
+		
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.news">新闻资讯</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">牛排怎么分类...</a></li>
+		</ul>
+		
+		<div class="news-conwrap">
+			<div ng-bind-html="newsone.content"></div>		
+			<a ui-sref="index.news" class="shop-icon">返回列表页</a>
+		</div>
+
+	<!--jq调用-->
+	<script src="js/jquery-1.11.0.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		//导航当前项切换	
+		$(".nav-item").click(function(){
+			$(this).parent("li").siblings().children().removeClass("nav-active");		
+			//点击对象的父级（li）的兄弟级（li）的子集（a）移除类
+			$(this).addClass("nav-active");												
+			//给点击对象添加类
+		});
+		
+	</script>

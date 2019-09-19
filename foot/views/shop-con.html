@@ -1,0 +1,22 @@
+		
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.shop">店面展示</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">北京店</a></li>
+		</ul>
+		
+		<div class="shop-conwrap">
+			<h1 class="shop-contit">{{shopone.title}}</h1>
+			<span class="shop-conpic">
+				<img ng-src="{{shopone.pic}}"/>
+			</span>
+			<p class="shop-font14"><span class="shop-font18">特色菜品：</span>{{shopone.dishes}}</p>
+			<p class="shop-font14"><span class="shop-font18">营业时间：</span>{{shopone.business_time}}</p>
+			<p class="shop-font14"><span class="shop-font18">停车泊位：</span>{{shopone.parking}}</p>
+			<p class="shop-font14"><span class="shop-font18">餐厅地址：</span>{{shopone.address}}</p>
+			<p class="shop-font14"><span class="shop-font18">餐厅标签：</span>{{shopone.tag}}</p>
+			
+			<a href="shop.html" class="shop-icon">返回列表页</a>
+		</div>

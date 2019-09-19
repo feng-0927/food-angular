@@ -1,0 +1,39 @@
+		
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.news">新闻资讯</a></li>
+		</ul>
+		<div class="newslist-wrap">
+			<p class="newslist-tit">新闻资讯</p>
+			<div ng-repeat="item in news">
+				<dl class="newslist-box clearfix">
+					<dt class="newslist-pic">
+						<img ng-src="{{item.pic}}"/>
+					</dt>
+					<dd class="newslist-txt">
+						<a ui-sref="index.news.detail({id: item.news_id})" class="newslist-font24">{{item.title}}</a>
+						<ul class="newslist-ul">
+							<li class="newslist-li">
+								<p class="newslist-time">{{item.create_time*1000|date: "yyyy-MM-dd"}}</p>
+							</li>
+							<li class="newslist-li">
+								<a ui-sref="index.news.detail({id: item.news_id})" class="newslist-con" ng-bind-html="item.description"></a>
+							</li>
+							<li class="newslist-li"><a class="newslist-link" ui-sref="index.news.detail({id: item.news_id})">&lt;阅读全文&gt;</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<span class="news-line">
+					<img src="./assets/home/img/news-line.png"/>
+				</span>
+			</div>
+			<!-- <ul class="shop-paging clearfix">
+				<li><a href="javascript:;" class="pag-item">&lt;</a></li>
+				<li><a href="news.html" class="pag-item pag-active">1</a></li>
+				<li><a href="javascript:;" class="pag-item">2</a></li>
+				<li><a href="javascript:;" class="pag-item">3</a></li>
+				<li><a href="javascript:;" class="pag-item">4</a></li>
+				<li><a href="javascript:;" class="pag-item">&gt;</a></li>
+			</ul> -->
+		</div>

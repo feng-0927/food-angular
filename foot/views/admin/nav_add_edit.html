@@ -1,0 +1,51 @@
+<!-- content start -->
+<div class="admin-content">
+  <div class="am-cf am-padding">
+    <div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">导航</strong> / <small>{{id?"编辑":"添加"}}</small></div>
+  </div>
+  <div class="am-tabs am-margin" data-am-tabs>
+    <ul class="am-tabs-nav am-nav am-nav-tabs">
+      <!-- <li ><a href="#tab1">基本信息</a></li> -->
+      <li class="am-active"><a href="#tab2">详细描述</a></li>
+      <!-- <li><a href="#tab3">SEO 选项</a></li> -->
+    </ul>
+    <div class="am-tabs-bd">
+      <div class="am-tab-panel am-fade am-in am-active" id="tab2">
+        <form class="am-form">
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              名称
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" ng-model="nav.title" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6">*必填，不可重复</div>
+          </div>
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              链接
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" ng-model="nav.link" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6">*必填，不可重复</div>
+          </div>
+          <div class="am-g am-margin-top">
+            <div class="am-u-sm-2 am-text-right">
+              排序
+            </div>
+            <div class="am-u-sm-4">
+              <input type="text" ng-model="nav.orders" class="am-input-sm">
+            </div>
+            <div class="am-u-sm-6">*必填，不可重复</div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="am-margin">
+    <button type="button" ng-click="save()" class="am-btn am-btn-primary am-btn-xs">提交保存</button>
+  </div>
+</div>
+<!-- content end -->

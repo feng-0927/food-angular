@@ -1,0 +1,24 @@
+		
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.about-us">关于我们</a></li>
+		</ul>
+		
+		<div class="about-wrap">  
+			<dl class="about-dl clearfix" ng-repeat="item in company">
+				<dt class="about-pic">
+					<img ng-src="{{item.pic}}"/>
+				</dt>
+				<dd class="about-txt">
+					<h3 class="about-h">{{item.title}}</h3>
+					<p class="about-p">电话：{{item.phone}}</p>
+					<p class="about-p">传真：{{item.tel}}</p>
+					<p class="about-p">邮编：{{item.postal_code}}</p>
+					<p class="about-p">地址：{{item.address}}</p>
+				</dd>
+			</dl>
+			<p class="about-p2">全国加盟热线及邮箱</p>
+            <p class="about-p2">9510 5396</p>
+			<p class="about-p2">E-mail:jiameng@diocoffee.com</p>
+		</div>

@@ -1,0 +1,75 @@
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-repeat="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-repeat="index.shop">店面展示</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">北京店</a></li>
+		</ul>
+		<!-- table-active -->
+		<div class="clearfix table-wrap" id="tab-span">
+			<span ng-repeat="item in region" class="table-item">{{item.region_name}}</span>
+			<!-- <div class="search clearfix">
+				<input class="inp-txt" type="text" name="address" value="输入关键字" 
+				onfocus="if(this.value=='输入关键字'){this.value=''};this.style.color='black';"
+				onblur="if(this.value==''||this.value=='输入关键字'){this.value='输入关键字';this.style.color='gray';}" />
+				<input class="inp-btn" type="button" name="" id="" value="搜索" />
+			</div> -->
+		</div>
+		<div id="table-div">
+			<div class="table-pic table-show clearfix">
+				<a class="shop-wrap {{item.shop_id!='4'&&item.shop_id!='1' ? 'shop-right' : ''}}" ng-repeat="item in shop |filter:'北京店'" ui-sref="index.shop.detail({id: item.shop_id})">
+					<span class="shop-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<p class="shop-tit">{{item.title}}</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+					<a ui-sref="index.shop.detail({id: itme.shop_id})" class="shop-wrap {{item.shop_id!='4'&&item.shop_id!='1' ? 'shop-right' : ''}}" ng-repeat="item in shop |filter:'广州店'">
+							<span class="shop-pic">
+								<img ng-src="{{item.pic}}" alt="" />
+							</span>
+							<p class="shop-tit">{{item.title}}</p>
+						</a>
+			</div>
+			<div class="table-pic clearfix">
+					<a ui-sref="index.shop.detail({id: itme.shop_id})" class="shop-wrap {{item.shop_id!='4'&&item.shop_id!='1' ? 'shop-right' : ''}}" ng-repeat="item in shop |filter:'厦门店'">
+							<span class="shop-pic">
+								<img ng-src="{{item.pic}}" alt="" />
+							</span>
+							<p class="shop-tit">{{item.title}}</p>
+						</a>
+			</div>
+			<div class="table-pic clearfix">
+					<a ui-sref="index.shop.detail({id: itme.shop_id})" class="shop-wrap {{item.shop_id!='4'&&item.shop_id!='1' ? 'shop-right' : ''}}" ng-repeat="item in shop |filter:'北京店'">
+							<span class="shop-pic">
+								<img ng-src="{{item.pic}}" alt="" />
+							</span>
+							<p class="shop-tit">{{item.title}}</p>
+						</a>
+			</div>
+			<div class="table-pic clearfix">
+					<a ui-sref="index.shop.detail({id: itme.shop_id})" class="shop-wrap {{item.shop_id!='4'&&item.shop_id!='1' ? 'shop-right' : ''}}" ng-repeat="item in shop |filter:'深圳店'">
+							<span class="shop-pic">
+								<img ng-src="{{item.pic}}" alt="" />
+							</span>
+							<p class="shop-tit">{{item.title}}</p>
+						</a>
+			</div>
+			<div class="table-pic clearfix">
+					<a ui-sref="index.shop.detail({id: itme.shop_id})" class="shop-wrap {{item.shop_id!='4'&&item.shop_id!='1' ? 'shop-right' : ''}}" ng-repeat="item in shop |filter:'其他'">
+							<span class="shop-pic">
+								<img ng-src="{{item.pic}}" alt="" />
+							</span>
+							<p class="shop-tit">{{item.title}}</p>
+						</a>
+			</div>
+			<!-- <ul class="shop-paging clearfix">
+				<li><a href="shop-con.html" class="pag-item">&lt;</a></li>
+				<li><a href="shop-con.html" class="pag-item pag-active">1</a></li>
+				<li><a href="javascript:;" class="pag-item">2</a></li>
+				<li><a href="javascript:;" class="pag-item">3</a></li>
+				<li><a href="javascript:;" class="pag-item">4</a></li>
+				<li><a href="javascript:;" class="pag-item">&gt;</a></li>
+			</ul> -->
+		</div>

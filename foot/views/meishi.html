@@ -1,0 +1,90 @@
+		<ul class="breadnav clearfix">
+			<li class="bnav-item"><a ui-sref="index">首页</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a ui-sref="index.meishi">美食系列</a></li>
+			<li class="bnav-item">&lt;</li>
+			<li class="bnav-item"><a href="javascript:;">全部菜品</a></li>
+		</ul>
+		<div class="clearfix table-wrap" id="tab-span">
+			<span ng-click="stl(item.cate_name)" ng-repeat="item in foodCate" class="table-item table-active">{{item.cate_name}}</span>
+			<!-- <div class="search clearfix">
+				table-active
+				<input class="inp-txt" type="text" name="address" value="输入关键字" 
+				onfocus="if(this.value=='输入关键字'){this.value=''};this.style.color='black';"
+				onblur="if(this.value==''||this.value=='输入关键字'){this.value='输入关键字';this.style.color='gray';}" />
+				<input class="inp-btn" type="button" name="" id="" value="搜索" />
+			</div> -->
+		</div>
+		<div id="table-div">
+			<div class="table-pic table-show clearfix">
+				<a ng-repeat="item in food" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{{item.price}}元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a ng-repeat="item in food |filter:'风味披萨'" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{item.price}}元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a ng-repeat="item in food |filter:'意面/烩饭'" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{item.price}}元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a ng-repeat="item in food |filter:'经典牛排'" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{item.price}}元/24寸</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a ng-repeat="item in food |filter:'甜品小食'" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{item.price}}元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a ng-repeat="item in food |filter:'酒水饮料'" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{item.price}}元</p>
+				</a>
+			</div>
+			<div class="table-pic clearfix">
+				<a ng-repeat="item in food |filter:'其他'" ui-sref="index.meishi.detail({id: item.food_id})" class="ms-wrap ms-right">
+					<span class="ms-pic">
+						<img ng-src="{{item.pic}}" alt="" />
+					</span>
+					<h2 class="ms-tit">{{item.title}}</h2>
+					<p class="ms-txt">价格：{item.price}}元</p>
+				</a>
+			</div>
+			<!-- <ul class="ms-paging clearfix">
+				<li><a href="javascript:;" class="pag-item">&lt;</a></li>
+				<li><a href="javascript:;" class="pag-item pag-active">1</a></li>
+				<li><a href="javascript:;" class="pag-item">2</a></li>
+				<li><a href="javascript:;" class="pag-item">3</a></li>
+				<li><a href="javascript:;" class="pag-item">4</a></li>
+				<li><a href="javascript:;" class="pag-item">&gt;</a></li>
+			</ul> -->
+		</div>
